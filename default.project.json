@@ -1,0 +1,13 @@
+{
+  "name": "DefaultLocalScripts",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "DefaultLocalScripts": {
+        "$path": "src/DefaultLocalScripts"
+      }
+    }
+
+  }
+}
