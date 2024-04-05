@@ -1,6 +1,6 @@
 # DefaultLocalScripts
 
-![alt text](Icon/IconFinal.png)
+![alt text](Icon/IconFinal_Small.png)
 
 DefaultLocalScripts is a Roblox Studio plugin that changes the default content of new LocalScripts in case you're sick of seeing `print("Hello world")`.
 
