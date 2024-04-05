@@ -4,3 +4,9 @@
 # Roblox Studio lock files
 /*.rbxlx.lock
 /*.rbxl.lock
+
+# Material Maker temp files
+/*.mmcr
+
+# Blender backup
+/*.blend1

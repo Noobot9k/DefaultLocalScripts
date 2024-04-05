@@ -22,7 +22,7 @@ Print("Hello world")
 
 ## Install
 
-Either install the plugin from Roblox's website [here](https://create.roblox.com/store/asset/6708420842/Default-LocalScript-changer) or download the latest release [here](https://github.com/Noobot9k/DefaultLocalScripts/releases) and place it in your local plugins folder ('C:\Users\USERNAME\AppData\Local\Roblox\Plugins' by default. In Roblox Studio select Plugins>Plugins Folder to open the folder.)
+Either install the plugin from [Roblox's website](https://create.roblox.com/store/asset/6708420842/Default-LocalScript-changer) or download the [latest release](https://github.com/Noobot9k/DefaultLocalScripts/releases) and place it in your local plugins folder ('C:\Users\USERNAME\AppData\Local\Roblox\Plugins' by default. In Roblox Studio select Plugins>Plugins Folder to open the folder.)
 
 ### Rojo
 This project is using [Rojo](https://github.com/rojo-rbx/rojo) 7.4.1.
