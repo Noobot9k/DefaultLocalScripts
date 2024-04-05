@@ -1,4 +1,7 @@
 # DefaultLocalScripts
+
+![alt text](Icon/IconFinal.png)
+
 DefaultLocalScripts is a Roblox Studio plugin that changes the default content of new LocalScripts in case you're sick of seeing `print("Hello world")`.
 
 It is also very useful for use with [UniversalLocalScripts](https://github.com/Noobot9k/UniversalLocalScripts), a module that allows LocalScripts to run in the workspace among other places.

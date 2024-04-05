@@ -1,0 +1,121 @@
+{
+	"connections": [
+		{
+			"from": "splatter",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "image",
+			"from_port": 0,
+			"to": "splatter",
+			"to_port": 0
+		},
+		{
+			"from": "splatter",
+			"from_port": 0,
+			"to": "normal_map2",
+			"to_port": 0
+		},
+		{
+			"from": "normal_map2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@@3137",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 0,
+				"y": 0
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.5,
+				"emission_energy": 1,
+				"flags_transparent": true,
+				"metallic": 0,
+				"normal": 1,
+				"roughness": 1,
+				"size": 11,
+				"sss": 1
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "image",
+			"node_position": {
+				"x": -812.515564,
+				"y": -67.343277
+			},
+			"parameters": {
+				"clamp": false,
+				"fix_ar": false,
+				"image": "%PROJECT_PATH%/PainterlyStroke_albedo.png"
+			},
+			"seed_int": 0,
+			"type": "image"
+		},
+		{
+			"name": "splatter",
+			"node_position": {
+				"x": -540.600037,
+				"y": -44.259979
+			},
+			"parameters": {
+				"count": 175,
+				"inputs": 0,
+				"rotate": 13.1,
+				"scale": 0.43,
+				"scale_x": 0.4,
+				"scale_y": 0.4,
+				"value": 1,
+				"variations": false
+			},
+			"seed_int": 1688255872,
+			"type": "splatter"
+		},
+		{
+			"name": "normal_map2",
+			"node_position": {
+				"x": -281.436798,
+				"y": 147.741943
+			},
+			"parameters": {
+				"buffer": 1,
+				"param2": 0,
+				"size": 11,
+				"strength": 1
+			},
+			"seed_int": 0,
+			"type": "normal_map2"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}
