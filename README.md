@@ -39,4 +39,4 @@ rojo build -o "DefaultLocalScripts.rbxlx"
 
 Next, open `DefaultLocalScripts.rbxlx` in Roblox Studio.
 
-Navigate in the Explorer to `ReplicatedFirst.DefaultLocalScripts` and right click it>Save as Local Plugin
+Navigate in the Explorer to `ReplicatedStorage.DefaultLocalScripts` and right-click it>Save as Local Plugin
