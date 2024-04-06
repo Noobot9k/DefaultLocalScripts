@@ -71,17 +71,21 @@ function IsDecendantOfAPlayerBackpack(Obj : LocalScript)
 end
 function CanLocalScriptRunUniversally(Obj : LocalScript)
 	local UniversalLocalScriptsOBJ = game.ReplicatedFirst:FindFirstChild("UniversalLocalScripts")
-	
 	if not UniversalLocalScriptsOBJ then return false end
 
-	local canRun = false
+	local RunInPlayerCharacters = UniversalLocalScriptsOBJ:GetAttribute("RunInPlayerCharacters")
+	local RunInPlayerBackpacks = UniversalLocalScriptsOBJ:GetAttribute("RunInPlayerBackpacks")
+	local RunInCurrentCamera = UniversalLocalScriptsOBJ:GetAttribute("RunInCurrentCamera")
+	local RunInWorkspace = UniversalLocalScriptsOBJ:GetAttribute("RunInWorkspace")
 
-	if UniversalLocalScriptsOBJ:GetAttribute("RunInPlayerCharacters") then canRun = canRun or IsDecendantOfAPlayerCharacter(Obj) or Obj:IsDescendantOf(game.StarterPlayer.StarterCharacterScripts) end
-	if UniversalLocalScriptsOBJ:GetAttribute("RunInPlayerBackpacks") then canRun = canRun or IsDecendantOfAPlayerBackpack(Obj) or Obj:IsDescendantOf(game.StarterPack) end
-	if UniversalLocalScriptsOBJ:GetAttribute("RunInCurrentCamera") then canRun = canRun or Obj:IsDescendantOf(workspace.CurrentCamera) end
-	if UniversalLocalScriptsOBJ:GetAttribute("RunInWorkspace") then canRun = canRun or Obj:IsDescendantOf(workspace) or Obj == workspace end
+	if IsDecendantOfAPlayerCharacter(Obj) or Obj:IsDescendantOf(game.StarterPlayer.StarterCharacterScripts) then
+		return RunInPlayerCharacters end -- this needs to run before the RunInWorkspace check.
+	if IsDecendantOfAPlayerBackpack(Obj) or Obj:IsDescendantOf(game.StarterPack) then
+		return RunInPlayerBackpacks end
+	if Obj:IsDescendantOf(workspace.CurrentCamera) then return RunInCurrentCamera end -- this needs to run before the RunInWorkspace check.
+	if Obj:IsDescendantOf(workspace) or Obj == workspace then return RunInWorkspace end -- this needs to be last.
 
-	return canRun
+	return false
 end
 
 -- Replace contents of (presumably) new scripts.
